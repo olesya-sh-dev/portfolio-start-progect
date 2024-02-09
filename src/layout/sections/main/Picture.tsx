@@ -2,41 +2,39 @@ import React from "react";
 import styled from "styled-components";
 import photo from "./../../../assets/images/main-photo.webp";
 import background from "./../../../assets/images/yellow-bg.png";
+import { FlexWrapper } from "../../../components/FlexWrapper";
+
 export const Picture = () => {
   return (
     <StyledPicture>
-      <Photo src={photo} alt="photo" />
+      <FlexWrapper>
+        <Photo src={photo} alt="photo" />
+      </FlexWrapper>
     </StyledPicture>
   );
 };
 
 const StyledPicture = styled.div`
-  border: 2px solid red;
-  position: relative;
   width: 50%;
+  position: relative;
 
   &::before {
     content: "";
     background-image: url("${background}");
     position: absolute;
     background-repeat: no-repeat;
-    transform: translateX(57px);
-    transform: translateY(-500);
+    background-position: 0px bottom;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     z-index: -1;
+    overflow: hidden;
   }
 `;
-//   position: relative;
-//   width: 50%;
-//   /* background-image: ${backround};
-//   right: -57px;
-//   top: -248px; */
-// `;
-// const Background = styled.img`
-//   position: absolute;
-// `;
 
-const Photo = styled.img``;
+const Photo = styled.img`
+  margin-left: auto;
+  border-bottom-left-radius: 150%;
+  border-bottom-right-radius: 350px;
+`;

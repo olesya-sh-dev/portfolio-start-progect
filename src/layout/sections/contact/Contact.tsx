@@ -11,7 +11,7 @@ export const Contact = () => {
   return (
     <StyledContact>
       <Container>
-        <FlexWrapper direction="column" justify="center" align="center">
+        <FlexWrapper direction="column" gap="90px">
           <SectionTitle>Contact me</SectionTitle>
           <Form />
         </FlexWrapper>
@@ -20,10 +20,10 @@ export const Contact = () => {
   );
 };
 
-//последовательность хар-к в стилях
-
 const StyledContact = styled.section`
   border: 2px solid red;
+  margin-bottom: 55px;
+
   //400 или 430с паддингами
   /* max-width: 430px; */
 `;

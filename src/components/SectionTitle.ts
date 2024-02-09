@@ -7,10 +7,7 @@ export const SectionTitle = styled.h3`
   font-size: 48px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 85px;
   position: relative;
-
-  // не сдвигается вправо псевдоэлемент
 
   &::before {
     content: "";

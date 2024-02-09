@@ -6,5 +6,4 @@ export const Details = styled.p`
   font-family: "Nunito", sans-serif;
   font-size: 24px;
   font-weight: 400;
-  line-height: 36px;
 `;

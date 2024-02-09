@@ -8,7 +8,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 export const Greeting = () => {
   return (
     <StyledGreeting>
-      <FlexWrapper direction="column" justify="center" align="start">
+      <FlexWrapper direction="column" align="start">
         <MainTitle>web developer</MainTitle>
         <GreetingText>Hello, my name is Olesya Shalay</GreetingText>
         <Details>
@@ -16,8 +16,12 @@ export const Greeting = () => {
           career. You can add more information on the about page.
         </Details>
         <div>
-          <StyledBtn primary>Progects</StyledBtn>
-          <StyledBtn secondary>LinkedIn</StyledBtn>
+          <StyledBtn as="a" href={""} primary>
+            Progects
+          </StyledBtn>
+          <StyledBtn as="a" href={""} secondary>
+            LinkedIn
+          </StyledBtn>
         </div>
       </FlexWrapper>
     </StyledGreeting>
@@ -26,9 +30,6 @@ export const Greeting = () => {
 
 const StyledGreeting = styled.div`
   width: 50%;
-
-  //нужен ли паддинг
-  /* padding-right: 90px; */
 
   ${Details} {
     //в макете справа небольшой отступ

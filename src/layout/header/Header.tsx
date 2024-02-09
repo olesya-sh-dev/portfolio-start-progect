@@ -10,18 +10,23 @@ export const Header = () => {
     <StyledHeader>
       <Container>
         <FlexWrapper>
-          <Logo>Olesya Shalay</Logo>
+          <Logo as="a" href="">
+            Olesya Shalay
+          </Logo>
           <StyledMenu>
+            {/* //можно так завернуть? */}
             <ul>
-              <li>
-                <a href="">About</a>
-              </li>
-              <li>
-                <a href="">Progects</a>
-              </li>
-              <li>
-                <a href="">Contacts</a>
-              </li>
+              <FlexWrapper justify="flex-end" gap="50px">
+                <li>
+                  <a href="">About</a>
+                </li>
+                <li>
+                  <a href="">Progects</a>
+                </li>
+                <li>
+                  <a href="">Contacts</a>
+                </li>
+              </FlexWrapper>
             </ul>
           </StyledMenu>
         </FlexWrapper>
@@ -31,31 +36,23 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  display: flex;
-  align-items: center;
-  position: fixed;
-  height: 55px;
+  line-height: 55px;
+  //почему без этого header сужается, если container и wrapper 100%
   width: 100%;
+  position: fixed;
   z-index: 5;
-  /* background-color: red; */
   ${Logo} {
     margin-right: auto;
   }
-  border: 1px solid red;
+  border: 1px solid blue;
 `;
 
 const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    gap: 50px;
-
-    a {
-      color: ${theme.colors.primary};
-      font-family: "Raleway", sans-serif;
-      font-size: 18px;
-      font-weight: 500;
-    }
+  a {
+    color: ${theme.colors.primary};
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
   }
 `;
 

@@ -25,6 +25,10 @@ background-color: beige;
   
   a {
     text-decoration: none;
+    &:hover{
+      background-color: ${theme.colors.accent};
+      border: 2px dashed ${theme.colors.primary}
+    }
   }
 
   ul {

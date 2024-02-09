@@ -10,10 +10,15 @@ export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
-        <FlexWrapper direction={"column"}>
+        <FlexWrapper direction={"column"} gap="75px">
           <SectionTitle>Skills</SectionTitle>
           <SkillContentSection>
-            <FlexWrapper justify="space-between" wrap={"wrap"}>
+            <FlexWrapper
+              justify="space-between"
+              wrap={"wrap"}
+              gap="95px"
+              rowgap="75px"
+            >
               <Icon iconId={"vscode"} />
               <Icon iconId={"js"} />
               <Icon iconId={"css"} />
@@ -35,14 +40,8 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  border: 2px solid red;
+  border: 1px solid blue;
+  margin-bottom: 140px;
 `;
 
-const SkillContentSection = styled.div`
-  //можно ли так добавлять атрибут
-  //между рядами 74 как и от заголовка. Создавать два ряда или пусть будет 95, как и между иконками
-
-  ${FlexWrapper} {
-    gap: 95px;
-  }
-`;
+const SkillContentSection = styled.div``;

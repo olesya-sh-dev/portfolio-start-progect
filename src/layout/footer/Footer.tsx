@@ -9,17 +9,21 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <FlexWrapper direction="column" align="center">
+        <FlexWrapper direction="column">
           <StyledSocialLinks>
-            <a href="#">
-              <Icon iconId={"instagram"} width="40" height="40" />
-            </a>
-            <a href="#">
-              <Icon iconId={"linkedin"} width="40" height="40" />
-            </a>
-            <a href="#">
-              <Icon iconId={"mail"} width="40" height="40" />
-            </a>
+            {/* width hard code */}
+
+            <FlexWrapper justify="space-between" width="190px">
+              <a href="#">
+                <Icon iconId={"instagram"} width="40" height="40" />
+              </a>
+              <a href="#">
+                <Icon iconId={"linkedin"} width="40" height="40" />
+              </a>
+              <a href="#">
+                <Icon iconId={"mail"} width="40" height="40" />
+              </a>
+            </FlexWrapper>
           </StyledSocialLinks>
           <CopyRight>All Rights Reversed 2024</CopyRight>
         </FlexWrapper>
@@ -29,8 +33,10 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.div`
-  border: 2px solid red;
+  border: 1px solid blue;
   position: relative;
+
+  //hard code
   height: 345px;
 
   &::before {
@@ -47,12 +53,7 @@ const StyledFooter = styled.div`
   }
 `;
 
-//нужен ли wrapper для позиционирования
-const StyledSocialLinks = styled.div`
-  display: flex;
-  width: 190px;
-  justify-content: space-between;
-`;
+const StyledSocialLinks = styled.div``;
 
 const CopyRight = styled.small`
   margin-top: 35px;

@@ -15,15 +15,14 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
-  line-height: 150%;
+  border-radius: 8px;
+  padding: 8px 24px 8px 24px;
 
   ${(props) =>
     props.primary &&
     css<StyledBtnPropsType>`
       background: ${theme.colors.accent};
       width: 115px;
-      border-radius: 8px;
-      padding: 8px 24px 8px 24px;
     `};
 
   ${(props) =>
@@ -31,8 +30,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     css<StyledBtnPropsType>`
       border: 2px solid ${theme.colors.primary};
       width: 117px;
-      border-radius: 8px;
-      padding: 8px 24px 8px 24px;
+
       margin-left: 12px;
     `};
 
@@ -42,7 +40,6 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
       border: 1px solid ${theme.colors.primary};
       width: 150px;
       border-radius: 24px;
-      padding: 8px 24px 8px 24px;
       white-space: nowrap;
     `};
 
@@ -50,9 +47,6 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     props.send &&
     css<StyledBtnPropsType>`
       width: 90px;
-      border-radius: 8px;
       background: ${theme.colors.accent};
-      padding: 8px 24px 8px 24px;
-    `};
+    `}
 `;
-//как подвинуть кнопку при отрисовке, а не здесь

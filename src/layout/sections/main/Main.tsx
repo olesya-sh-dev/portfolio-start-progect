@@ -10,7 +10,7 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify="space-between" align="center">
+        <FlexWrapper>
           <>
             <Greeting />
             <Picture />
@@ -23,5 +23,6 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   overflow: hidden;
-  border: 2px solid red;
+  border: 1px solid blue;
+  margin-bottom: 140px;
 `;
