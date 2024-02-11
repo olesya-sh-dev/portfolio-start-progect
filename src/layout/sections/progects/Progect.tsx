@@ -4,7 +4,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import styled from "styled-components";
 import { StyledBtn } from "../../../components/Button";
 import { theme } from "../../../styles/Theme";
-import { Container } from "../../../components/Container";
+
 import { Details } from "../../../components/Details";
 import { SectionTitle } from "../../../components/SectionTitle";
 
@@ -29,7 +29,7 @@ export const Progect = (props: ProgectPropsType) => {
             <Title>{props.title}</Title>
             <Text>{props.text}</Text>
 
-            <StyledBtn as="a" href={""} vewProgect>
+            <StyledBtn as="a" href={""} vewprogect>
               View Progect
             </StyledBtn>
           </FlexWrapper>
@@ -45,9 +45,12 @@ const StyledProgect = styled.div`
   border-radius: 25px;
   overflow: hidden;
   background-color: ${theme.colors.colorBg.progectsBg};
-
-  /* //не работает
-  {
+  /* display: flex; 
+   &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+  */
+  /* не работает ${FlexWrapper} {
     &:nth-of-type(even) {
       flex-direction: row-reverse;
     }
@@ -67,8 +70,6 @@ const Title = styled(SectionTitle)`
 const Text = styled(Details)`
   font-size: 18px;
 `;
-
-const Link = styled.link``;
 
 const Image = styled.img`
   width: 50%;

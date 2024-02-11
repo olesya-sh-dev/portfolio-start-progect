@@ -5,7 +5,7 @@ import { theme } from "../styles/Theme";
 type StyledBtnPropsType = {
   primary?: boolean;
   secondary?: boolean;
-  vewProgect?: boolean;
+  vewprogect?: boolean;
   send?: boolean;
 };
 
@@ -35,7 +35,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     `};
 
   ${(props) =>
-    props.vewProgect &&
+    props.vewprogect &&
     css<StyledBtnPropsType>`
       border: 1px solid ${theme.colors.primary};
       width: 150px;

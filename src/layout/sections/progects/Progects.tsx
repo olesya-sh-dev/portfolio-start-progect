@@ -12,6 +12,24 @@ import progect3 from "../../../assets/images/progect-3.webp";
 // <Progect reverse={index%2 === 0 }/>
 //}))
 
+const progects = [
+  {
+    title: "Progect1",
+    text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.",
+    src: progect1,
+  },
+  {
+    title: "Progect2",
+    text: "What was your role, your deliverables, if the project was personal, freelancing.",
+    src: progect2,
+  },
+  {
+    title: "Progect3",
+    text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.",
+    src: progect3,
+  },
+];
+
 export const ProgectS = () => {
   return (
     <ProgectsSection>
@@ -21,30 +39,15 @@ export const ProgectS = () => {
 
           <StyledProgectS>
             {/* //??? width //ширина hardcode*/}
-
             <FlexWrapper direction="column" gap="80px" width="992px">
-              <Progect
-                title={"Progect1"}
-                text={
-                  "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."
-                }
-                src={progect1}
-              />
-              <Progect
-                title={"Progect2"}
-                text={
-                  "What was your role, your deliverables, if the project was personal, freelancing."
-                }
-                src={progect2}
-                reverse
-              />
-              <Progect
-                title={"Progect3"}
-                text={
-                  "You can also add in this description the type of the project, if it was for web, mobile, electron."
-                }
-                src={progect3}
-              />
+              {progects.map(({ src, text, title }, i) => (
+                <Progect
+                  title={title}
+                  text={text}
+                  src={src}
+                  reverse={i % 2 === 1}
+                />
+              ))}
             </FlexWrapper>
           </StyledProgectS>
         </FlexWrapper>
