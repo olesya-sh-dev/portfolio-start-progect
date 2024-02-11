@@ -8,6 +8,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+   
+    
+
+  
   }
   
   
@@ -22,12 +26,13 @@ background-color: beige;
     -moz-osx-font-smoothing: grayscale;
   
 }
-  
+ 
+
   a {
     text-decoration: none;
     &:hover{
       background-color: ${theme.colors.accent};
-      border: 2px dashed ${theme.colors.primary}
+      border: 1px solid ${theme.colors.primary}
     }
   }
 

@@ -10,22 +10,21 @@ export const Header = () => {
     <StyledHeader>
       <Container>
         <FlexWrapper>
-          <Logo as="a" href="">
+          <Logo as="a" href={""}>
             Olesya Shalay
           </Logo>
-          <StyledMenu>
-            {/* //можно так завернуть? */}
+          <StyledMenu role="menu" aria-label="Menu">
             <ul>
               <FlexWrapper justify="flex-end" gap="50px">
-                <li>
-                  <a href="">About</a>
-                </li>
-                <li>
-                  <a href="">Progects</a>
-                </li>
-                <li>
-                  <a href="">Contacts</a>
-                </li>
+                <MenuItem as="a" href="" role="menuitem">
+                  About
+                </MenuItem>
+                <MenuItem as="a" href="" role="menuitem">
+                  Progects
+                </MenuItem>
+                <MenuItem as="a" href="" role="menuitem">
+                  Contacts
+                </MenuItem>
               </FlexWrapper>
             </ul>
           </StyledMenu>
@@ -47,13 +46,13 @@ const StyledHeader = styled.header`
   border: 1px solid blue;
 `;
 
-const StyledMenu = styled.nav`
-  a {
-    color: ${theme.colors.primary};
-    font-family: "Raleway", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-  }
+const StyledMenu = styled.nav``;
+
+const MenuItem = styled.li`
+  color: ${theme.colors.primary};
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
 `;
 
 //сохраняются 15px с боков

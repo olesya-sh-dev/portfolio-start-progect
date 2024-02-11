@@ -9,19 +9,17 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <FlexWrapper direction="column">
+        <FlexWrapper direction="column" gap="35px">
           <StyledSocialLinks>
-            {/* width hard code */}
-
             <FlexWrapper justify="space-between" align="center">
               <a href="#">
-                <Icon iconId={"instagram"} width="40" height="40" />
+                <Icon iconId={"instagram"} width="38" height="38" />
               </a>
               <a href="#">
-                <Icon iconId={"linkedin"} width="40" height="40" />
+                <Icon iconId={"linkedin"} width="38" height="38" />
               </a>
               <a href="#">
-                <Icon iconId={"mail"} width="40" height="40" />
+                <Icon iconId={"mail"} width="42" height="32" />
               </a>
             </FlexWrapper>
           </StyledSocialLinks>
@@ -32,13 +30,12 @@ export const Footer = () => {
   );
 };
 
-const StyledFooter = styled.div`
-  /* display: flex;
-  align-self: center; */
+const StyledFooter = styled.footer`
   border: 1px solid blue;
   position: relative;
   width: 100%;
-  //hard code
+
+  //??? max-height: 345px;
   height: 345px;
 
   &::before {
@@ -47,7 +44,6 @@ const StyledFooter = styled.div`
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
-
     top: 0;
     left: 0;
     bottom: 0;
@@ -61,6 +57,4 @@ const StyledSocialLinks = styled.div`
   width: 100%;
 `;
 
-const CopyRight = styled.small`
-  margin-top: 35px;
-`;
+const CopyRight = styled.small``;

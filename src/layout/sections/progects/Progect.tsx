@@ -23,7 +23,6 @@ export const Progect = (props: ProgectPropsType) => {
           <FlexWrapper direction="column" align="start" gap="24px">
             <Title>{props.title}</Title>
             <Text>{props.text}</Text>
-
             <StyledBtn as="a" href={""} vewprogect>
               View Progect
             </StyledBtn>

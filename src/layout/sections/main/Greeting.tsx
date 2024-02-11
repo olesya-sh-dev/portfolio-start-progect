@@ -15,14 +15,14 @@ export const Greeting = () => {
           Short text with details about you, what you do or your professional
           career. You can add more information on the about page.
         </Details>
-        <div>
+        <FlexWrapper justify="flex-start" gap="12px">
           <StyledBtn as="a" href={""} primary>
             Progects
           </StyledBtn>
           <StyledBtn as="a" href={""} secondary>
             LinkedIn
           </StyledBtn>
-        </div>
+        </FlexWrapper>
       </FlexWrapper>
     </StyledGreeting>
   );
@@ -43,8 +43,6 @@ const MainTitle = styled.h1`
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
-
-  //нужен ли этот отступ снизу
   margin-bottom: 12px;
 `;
 const GreetingText = styled.p`
