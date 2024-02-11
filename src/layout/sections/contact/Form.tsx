@@ -7,8 +7,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 export const Form = () => {
   return (
     <StyledForm>
-      {/* //ширина hardcode */}
-      <FlexWrapper direction="column" width="400px" gap="24px">
+      <FlexWrapper direction="column" gap="24px">
         <FlexWrapper direction="column" align="flex-start">
           <label htmlFor="name">Email</label>
           <input type="text" id="name"></input>
@@ -35,28 +34,29 @@ const StyledForm = styled.form`
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 600;
+  max-width: 400px;
+  width: 100%;
 
   label,
   legend {
     height: 30px;
   }
-
   input {
-    border: 1px solid ${theme.colors.colorBg.inputBorder};
-    border-radius: 8px;
-    width: 100%;
     height: 40px;
-    padding: 8px;
-    background: ${theme.colors.colorBg.progectsBg};
   }
+  textarea {
+    //?
+    height: 160px;
+    resize: none;
+  }
+
+  input,
   textarea {
     border: 1px solid ${theme.colors.colorBg.inputBorder};
     border-radius: 8px;
     width: 100%;
-    height: 160px;
     padding: 8px;
     background: ${theme.colors.colorBg.progectsBg};
-    resize: none;
   }
 
   ${StyledBtn} {

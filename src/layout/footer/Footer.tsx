@@ -13,7 +13,7 @@ export const Footer = () => {
           <StyledSocialLinks>
             {/* width hard code */}
 
-            <FlexWrapper justify="space-between" width="190px">
+            <FlexWrapper justify="space-between" align="center">
               <a href="#">
                 <Icon iconId={"instagram"} width="40" height="40" />
               </a>
@@ -33,9 +33,11 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.div`
+  /* display: flex;
+  align-self: center; */
   border: 1px solid blue;
   position: relative;
-
+  width: 100%;
   //hard code
   height: 345px;
 
@@ -45,6 +47,7 @@ const StyledFooter = styled.div`
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
+
     top: 0;
     left: 0;
     bottom: 0;
@@ -53,7 +56,10 @@ const StyledFooter = styled.div`
   }
 `;
 
-const StyledSocialLinks = styled.div``;
+const StyledSocialLinks = styled.div`
+  max-width: 190px;
+  width: 100%;
+`;
 
 const CopyRight = styled.small`
   margin-top: 35px;

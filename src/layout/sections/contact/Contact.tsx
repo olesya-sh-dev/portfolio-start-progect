@@ -23,7 +23,6 @@ export const Contact = () => {
 const StyledContact = styled.section`
   border: 2px solid red;
   margin-bottom: 55px;
-
   //400 или 430с паддингами
   /* max-width: 430px; */
 `;

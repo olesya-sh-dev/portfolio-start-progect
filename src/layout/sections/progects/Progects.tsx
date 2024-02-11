@@ -38,8 +38,7 @@ export const ProgectS = () => {
           <SectionTitle>Progects</SectionTitle>
 
           <StyledProgectS>
-            {/* //??? width //ширина hardcode*/}
-            <FlexWrapper direction="column" gap="80px" width="992px">
+            <FlexWrapper direction="column" gap="80px">
               {progects.map(({ src, text, title }, i) => (
                 <Progect
                   title={title}
@@ -61,4 +60,7 @@ const ProgectsSection = styled.section`
   margin-bottom: 140px;
 `;
 
-const StyledProgectS = styled.div``;
+const StyledProgectS = styled.div`
+  max-width: 992px;
+  width: 100%;
+`;

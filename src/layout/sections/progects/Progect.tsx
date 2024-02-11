@@ -20,12 +20,7 @@ export const Progect = (props: ProgectPropsType) => {
     <StyledProgect>
       <FlexWrapper direction={props.reverse ? "row-reverse" : "row"}>
         <ProgectInfo>
-          <FlexWrapper
-            direction="column"
-            align="start"
-            width="405px"
-            gap="24px"
-          >
+          <FlexWrapper direction="column" align="start" gap="24px">
             <Title>{props.title}</Title>
             <Text>{props.text}</Text>
 
@@ -45,6 +40,7 @@ const StyledProgect = styled.div`
   border-radius: 25px;
   overflow: hidden;
   background-color: ${theme.colors.colorBg.progectsBg};
+
   /* display: flex; 
    &:nth-of-type(even) {
       flex-direction: row-reverse;
