@@ -18,4 +18,10 @@ const StyledPicture = styled.div`
   right: 0;
 `;
 
-const Photo = styled.img``;
+const Photo = styled.img`
+  object-fit: cover;
+  object-position: center;
+  max-width: 720px;
+  max-height: 630px;
+  width: 100%;
+`;

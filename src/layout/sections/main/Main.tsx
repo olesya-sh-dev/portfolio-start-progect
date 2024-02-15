@@ -5,6 +5,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { Greeting } from "./Greeting";
 import { Picture } from "./Picture";
+import { theme } from "../../../styles/Theme";
 
 export const Main = () => {
   return (
@@ -18,7 +19,13 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  overflow: hidden;
+  /* overflow: hidden; */
   border: 1px solid blue;
   margin-bottom: 140px;
+
+  ${Container} {
+    @media ${theme.media.tablet} {
+      margin-top: 630px;
+    }
+  }
 `;

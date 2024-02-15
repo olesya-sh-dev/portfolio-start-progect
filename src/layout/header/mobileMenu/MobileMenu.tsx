@@ -6,10 +6,10 @@ import { Icon } from "../../../components/Icon";
 export const MobileMenu = () => {
   return (
     <StyledMobileMenu>
-      <BurgerButton isOpen={true}>
+      <BurgerButton>
         <Icon iconId={"menu"} width="50" height="50" />
       </BurgerButton>
-      <MobileMenuPopup isOpen={true}>
+      <MobileMenuPopup isOpen={false}>
         <MenuItemList>
           <MenuItem as="a" href="">
             About
@@ -33,19 +33,14 @@ const StyledMobileMenu = styled.nav`
     display: block;
   }
 `;
-const BurgerButton = styled.button<{ isOpen: boolean }>`
+const BurgerButton = styled.button`
   position: absolute;
-  top: 20px;
+  top: 0;
   right: 20px;
   color: ${theme.colors.primary};
   z-index: 20;
-
-  ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
-      display: block;
-      position: fixed;
-    `}
+  display: block;
+  position: fixed;
 `;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -55,10 +50,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   bottom: 0;
   right: 0;
   z-index: 10;
-  background-color: ${theme.colors.colorBg.main};
   display: none;
-
-  display: flex;
   align-items: flex-end;
   justify-content: center;
   align-items: center;
@@ -69,9 +61,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     props.isOpen &&
     css<{ isOpen: boolean }>`
       color: ${theme.colors.accent};
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
     `}
 `;
 
@@ -81,7 +71,6 @@ const MenuItemList = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 20px;
-  height: 50%;
 `;
 
 const MenuItem = styled.li`

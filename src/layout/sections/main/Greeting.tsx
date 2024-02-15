@@ -37,6 +37,10 @@ const StyledGreeting = styled.div`
     //в макете справа небольшой отступ
     margin: 30px 20px 30px 0;
   }
+  @media ${theme.media.tablet} {
+    width: 100%;
+    padding-top: 0;
+  }
 `;
 
 const MainTitle = styled.h1`
