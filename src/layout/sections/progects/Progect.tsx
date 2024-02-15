@@ -40,11 +40,12 @@ const StyledProgect = styled.div`
   overflow: hidden;
   background-color: ${theme.colors.colorBg.progectsBg};
 
-  /* display: flex; 
-   &:nth-of-type(even) {
+  /* &:nth-of-type(even) {
+    ${FlexWrapper} {
       flex-direction: row-reverse;
     }
-  */
+  } */
+
   /* не работает ${FlexWrapper} {
     &:nth-of-type(even) {
       flex-direction: row-reverse;
@@ -53,6 +54,7 @@ const StyledProgect = styled.div`
 `;
 const ProgectInfo = styled.div`
   padding-left: 50px;
+  padding-right: 40px;
   width: 50%;
 `;
 

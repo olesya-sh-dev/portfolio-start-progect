@@ -39,11 +39,11 @@ export const ProgectS = () => {
 
           <StyledProgectS>
             <FlexWrapper direction="column" gap="80px">
-              {progects.map(({ src, text, title }, i) => (
+              {progects.map((p, i) => (
                 <Progect
-                  title={title}
-                  text={text}
-                  src={src}
+                  title={p.title}
+                  text={p.text}
+                  src={p.src}
                   reverse={i % 2 === 1}
                 />
               ))}

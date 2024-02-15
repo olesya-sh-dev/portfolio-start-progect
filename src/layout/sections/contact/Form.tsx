@@ -9,6 +9,7 @@ export const Form = () => {
   return (
     <StyledForm role="form">
       <FlexWrapper direction="column" gap="24px">
+        {/* Вынести в отдельный компонент */}
         <FlexWrapper direction="column" align="flex-start">
           <label htmlFor="name">Name</label>
           <Field type="text" id="name" aria-placeholder="Your name" />
@@ -18,6 +19,7 @@ export const Form = () => {
           <label htmlFor="eMail">Email</label>
           <Field type="eMail" id="eMail" aria-placeholder="Your eMail" />
         </FlexWrapper>
+
         <FlexWrapper direction="column" align="flex-start">
           <legend aria-labelledby="Message">Message</legend>
           <Field as="textarea" aria-placeholder="Type a message" />

@@ -8,25 +8,27 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   
-    
+  }
 
   
+  
+  *:focus-visible {
+    outline-color: ${theme.colors.accent};
   }
   
-  
   body {
-    /* background-color: ${theme.colors.colorBg.main}; */
-background-color: beige;
+    background-color: ${theme.colors.colorBg.main};
 
     font-family: 'Playfair Display','Comfortaa', 'Roboto', 'Nunito','Raleway',-apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen",
       "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  
+  min-width: 360px;
+
 }
- 
+
+
 
   a {
     text-decoration: none;

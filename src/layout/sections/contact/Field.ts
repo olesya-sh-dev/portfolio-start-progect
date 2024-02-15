@@ -8,7 +8,7 @@ export const Field = styled.input`
   padding: 8px;
   background: ${theme.colors.colorBg.progectsBg};
 
-  //где повесить на все элементы страницы
+  //где повесить на все элементы страницы?
   &:focus-visible {
     outline-color: ${theme.colors.accent};
   }

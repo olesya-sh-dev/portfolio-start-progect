@@ -10,13 +10,9 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper>
-          <>
-            <Greeting />
-            <Picture />
-          </>
-        </FlexWrapper>
+        <Greeting />
       </Container>
+      <Picture />
     </StyledMain>
   );
 };

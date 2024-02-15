@@ -30,6 +30,8 @@ export const Greeting = () => {
 
 const StyledGreeting = styled.div`
   width: 50%;
+  padding-top: 110px;
+  height: 629px;
 
   ${Details} {
     //в макете справа небольшой отступ
