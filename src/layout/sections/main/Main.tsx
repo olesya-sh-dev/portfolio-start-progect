@@ -52,10 +52,14 @@ const StyledMain = styled.section`
   /* overflow: hidden; */
   border: 1px solid blue;
   margin-bottom: 140px;
+  @media ${theme.media.tablet} {
+    margin-bottom: 60px;
+  }
 
   ${Container} {
     @media ${theme.media.tablet} {
       margin-top: 630px;
+      /* margin-bottom: 50px; */
     }
   }
 `;

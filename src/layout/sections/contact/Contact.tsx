@@ -23,4 +23,10 @@ export const Contact = () => {
 const StyledContact = styled.section`
   border: 1px solid blue;
   margin-bottom: 55px;
+  @media ${theme.media.tablet} {
+    margin-bottom: 20px;
+    ${FlexWrapper} {
+      gap: 45px;
+    }
+  }
 `;

@@ -4,6 +4,7 @@ import yellowfooter from "../../assets/images/yellow-footer.png";
 import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { theme } from "../../styles/Theme";
 
 export const Footer = () => {
   return (
@@ -32,13 +33,22 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   border: 1px solid blue;
-  position: relative;
+  /* position: relative; */
+  background-image: url("${yellowfooter}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 345px;
   width: 100%;
+  @media ${theme.media.tablet} {
+    min-height: 200px;
+    ${FlexWrapper} {
+      gap: 20px;
+    }
+  }
+`;
 
-  //??? max-height: 345px;
-  height: 345px;
-
-  &::before {
+/* &::before {
     content: "";
     background-image: url("${yellowfooter}");
     position: absolute;
@@ -50,7 +60,7 @@ const StyledFooter = styled.footer`
     right: 0;
     z-index: -1;
   }
-`;
+`; */
 
 const StyledSocialLinks = styled.div`
   max-width: 190px;

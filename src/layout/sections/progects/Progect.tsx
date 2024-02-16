@@ -40,6 +40,14 @@ const StyledProgect = styled.div`
   overflow: hidden;
   background-color: ${theme.colors.colorBg.progectsBg};
 
+  ${FlexWrapper} {
+    @media ${theme.media.mobile} {
+      flex-direction: column;
+      //ProgectInfo центрирование по вертикали
+      height: 100%;
+    }
+  }
+
   /* &:nth-of-type(even) {
     ${FlexWrapper} {
       flex-direction: row-reverse;
@@ -56,6 +64,15 @@ const ProgectInfo = styled.div`
   padding-left: 50px;
   padding-right: 40px;
   width: 50%;
+
+  @media ${theme.media.mobile} {
+    ${FlexWrapper} {
+      align-items: center;
+    }
+    width: 100vw;
+    height: 100vw;
+    padding: 15px;
+  }
 `;
 
 const Title = styled(SectionTitle)`
@@ -70,4 +87,7 @@ const Text = styled(Details)`
 
 const Image = styled.img`
   width: 50%;
+  @media ${theme.media.mobile} {
+    width: 100%;
+  }
 `;

@@ -7,6 +7,7 @@ import { Progect } from "./Progect";
 import progect1 from "../../../assets/images/progect-1.webp";
 import progect2 from "../../../assets/images/progect-2.webp";
 import progect3 from "../../../assets/images/progect-3.webp";
+import { theme } from "../../../styles/Theme";
 
 ///map((element, index)=>({
 // <Progect reverse={index%2 === 0 }/>
@@ -58,6 +59,12 @@ export const ProgectS = () => {
 const ProgectsSection = styled.section`
   border: 1px solid blue;
   margin-bottom: 140px;
+  @media ${theme.media.tablet} {
+    margin-bottom: 60px;
+    ${FlexWrapper} {
+      gap: 45px;
+    }
+  }
 `;
 
 const StyledProgectS = styled.div`
