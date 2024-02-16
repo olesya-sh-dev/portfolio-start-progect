@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   
   
   *:focus-visible {
-    outline-color: ${theme.colors.accent};
+    outline-color: red;
   }
   
   body {

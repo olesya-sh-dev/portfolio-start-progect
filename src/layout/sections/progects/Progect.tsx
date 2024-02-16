@@ -65,6 +65,13 @@ const ProgectInfo = styled.div`
   padding-right: 40px;
   width: 50%;
 
+  @media ${theme.media.tablet} {
+    padding: 20px;
+    ${FlexWrapper} {
+      gap: 20px;
+    }
+  }
+
   @media ${theme.media.mobile} {
     ${FlexWrapper} {
       align-items: center;

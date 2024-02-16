@@ -6,7 +6,7 @@ type StyledBtnPropsType = {
   primary?: boolean;
   secondary?: boolean;
   vewprogect?: boolean;
-  send?: boolean;
+  submitBtn?: boolean;
 };
 
 export const StyledBtn = styled.button<StyledBtnPropsType>`
@@ -44,7 +44,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     `};
 
   ${(props) =>
-    props.send &&
+    props.submitBtn &&
     css<StyledBtnPropsType>`
       width: 90px;
       background: ${theme.colors.accent};
