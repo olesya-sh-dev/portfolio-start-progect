@@ -36,6 +36,7 @@ export const Progect = (props: ProgectPropsType) => {
 };
 
 const StyledProgect = styled.div`
+  border: 1px solid red;
   border-radius: 25px;
   overflow: hidden;
   background-color: ${theme.colors.colorBg.progectsBg};
@@ -53,12 +54,6 @@ const StyledProgect = styled.div`
       flex-direction: row-reverse;
     }
   } */
-
-  /* не работает ${FlexWrapper} {
-    &:nth-of-type(even) {
-      flex-direction: row-reverse;
-    }
-  } */
 `;
 const ProgectInfo = styled.div`
   padding-left: 50px;
@@ -66,10 +61,7 @@ const ProgectInfo = styled.div`
   width: 50%;
 
   @media ${theme.media.tablet} {
-    padding: 20px;
-    ${FlexWrapper} {
-      gap: 20px;
-    }
+    /* padding: 20px; */
   }
 
   @media ${theme.media.mobile} {
@@ -78,7 +70,7 @@ const ProgectInfo = styled.div`
     }
     width: 100vw;
     height: 100vw;
-    padding: 15px;
+    padding: 5px;
   }
 `;
 

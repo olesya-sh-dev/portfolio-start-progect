@@ -35,11 +35,15 @@ export const ProgectS = () => {
   return (
     <ProgectsSection>
       <Container>
-        <FlexWrapper direction="column" gap="90px">
+        <FlexWrapper className="firstFlexWrapper" direction="column" gap="90px">
           <SectionTitle>Progects</SectionTitle>
 
           <StyledProgectS>
-            <FlexWrapper direction="column" gap="80px">
+            <FlexWrapper
+              className="secondFlexWrapper"
+              direction="column"
+              gap="80px"
+            >
               {progects.map((p, i) => (
                 <Progect
                   title={p.title}
@@ -62,8 +66,13 @@ const ProgectsSection = styled.section`
 
   @media ${theme.media.tablet} {
     margin-bottom: 60px;
-    ${FlexWrapper} {
-      gap: 45px;
+  }
+
+  ${FlexWrapper} {
+    &.firstFlexWrapper {
+      @media ${theme.media.tablet} {
+        gap: 45px;
+      }
     }
   }
 `;
@@ -71,4 +80,12 @@ const ProgectsSection = styled.section`
 const StyledProgectS = styled.div`
   max-width: 992px;
   width: 100%;
+
+  ${FlexWrapper} {
+    &.secondFlexWrapper {
+      @media ${theme.media.tablet} {
+        gap: 30px;
+      }
+    }
+  }
 `;

@@ -15,7 +15,7 @@ export const Skills = () => {
           <SectionTitle>Skills</SectionTitle>
           <SkillContentSection>
             <FlexWrapper
-              justify="space-between"
+              justify="center"
               wrap={"wrap"}
               gap="95px"
               rowgap="75px"
@@ -43,8 +43,10 @@ export const Skills = () => {
 const StyledSkills = styled.section`
   border: 1px solid blue;
   margin-bottom: 140px;
+
   @media ${theme.media.tablet} {
     margin-bottom: 60px;
+
     ${FlexWrapper} {
       gap: 45px;
     }
