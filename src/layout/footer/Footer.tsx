@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
-
+import { font } from "../../styles/Common";
 export const Footer = () => {
   return (
     <StyledFooter>
@@ -36,10 +36,11 @@ const StyledFooter = styled.footer`
   /* position: relative; */
   background-image: url("${yellowfooter}");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   min-height: 345px;
   width: 100%;
+
   @media ${theme.media.tablet} {
     min-height: 200px;
     ${FlexWrapper} {
@@ -67,4 +68,7 @@ const StyledSocialLinks = styled.div`
   width: 100%;
 `;
 
-const CopyRight = styled.small``;
+const CopyRight = styled.small`
+  font-size: 16px;
+  ${font}
+`;

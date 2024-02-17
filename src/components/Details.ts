@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 import { theme } from "../styles/Theme";
-
+import { font } from "../styles/Common";
 export const Details = styled.p`
-  color: ${theme.colors.fontColor};
-  font-family: "Nunito", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
+  ${font({
+    Fmax: 24,
+    Fmin: 18,
+  })}
 `;

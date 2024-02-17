@@ -1,7 +1,7 @@
 import React from "react";
 import { css, styled } from "styled-components";
 import { theme } from "../styles/Theme";
-
+import { font } from "../styles/Common";
 type StyledBtnPropsType = {
   primary?: boolean;
   secondary?: boolean;
@@ -11,10 +11,12 @@ type StyledBtnPropsType = {
 
 export const StyledBtn = styled.button<StyledBtnPropsType>`
   height: 43px;
-  color: ${theme.colors.primary};
-  font-family: "Roboto", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  ${font({
+    family: "'Roboto', 'sans-serif'",
+    weight: 500,
+    color: theme.colors.primary,
+  })}
   border-radius: 8px;
   padding: 8px 24px 8px 24px;
 
@@ -30,8 +32,6 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     css<StyledBtnPropsType>`
       border: 2px solid ${theme.colors.primary};
       width: 117px;
-
-      margin-left: 12px;
     `};
 
   ${(props) =>

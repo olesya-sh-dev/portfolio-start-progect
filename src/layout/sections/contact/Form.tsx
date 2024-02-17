@@ -1,8 +1,8 @@
 import React from "react";
-
 import { styled } from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { font } from "../../../styles/Common";
 
 export const Form = () => {
   return (
@@ -25,10 +25,8 @@ export const Form = () => {
   );
 };
 const StyledForm = styled.form`
-  color: ${theme.colors.primary};
-  font-family: "Nunito", sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  ${font({ weight: 600, color: theme.colors.primary })}
   max-width: 430px;
   width: 100%;
 
@@ -36,7 +34,6 @@ const StyledForm = styled.form`
   legend {
     height: 30px;
   }
-
   textarea {
     height: 160px;
     resize: none;
@@ -49,8 +46,10 @@ const StyledForm = styled.form`
     padding: 8px;
     background: ${theme.colors.colorBg.progectsBg};
   }
+  @media ${theme.media.tablet} {
+    margin-top: 30px;
+  }
 `;
-
 const Field = styled.div`
   width: 100%;
 `;

@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import { theme } from "../styles/Theme";
+import { font } from "../styles/Common";
 
 export const SectionTitle = styled.h3`
-  color: ${theme.colors.primary};
-  font-family: "Playfair Display", sans-serif;
-  font-size: 48px;
-  font-weight: 700;
+  ${font({
+    family: "'Playfair Display'",
+    weight: 700,
+    color: theme.colors.primary,
+    Fmin: 36,
+    Fmax: 48,
+  })}
+
   text-align: center;
   position: relative;
 

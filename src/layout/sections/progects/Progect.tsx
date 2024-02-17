@@ -1,13 +1,11 @@
 import React from "react";
-
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import styled from "styled-components";
 import { StyledBtn } from "../../../components/Button";
 import { theme } from "../../../styles/Theme";
-
 import { Details } from "../../../components/Details";
 import { SectionTitle } from "../../../components/SectionTitle";
-
+import { font } from "../../../styles/Common";
 type ProgectPropsType = {
   title: string;
   text: string;
@@ -60,28 +58,36 @@ const ProgectInfo = styled.div`
   padding-right: 40px;
   width: 50%;
 
-  @media ${theme.media.tablet} {
-    /* padding: 20px; */
-  }
-
   @media ${theme.media.mobile} {
     ${FlexWrapper} {
       align-items: center;
     }
+    padding-left: 30px;
+    padding-right: 30px;
     width: 100vw;
     height: 100vw;
-    padding: 5px;
   }
 `;
 
 const Title = styled(SectionTitle)`
-  font-size: 40px;
+  //как перезатереть только макс и мин значения?
+  ${font({
+    family: "'Playfair Display', 'sans-serif'",
+    weight: 700,
+    color: theme.colors.primary,
+    Fmin: 24,
+    Fmax: 40,
+  })}
+
   &::before {
     display: none;
   }
 `;
 const Text = styled(Details)`
-  font-size: 18px;
+  ${font({
+    Fmax: 18,
+    Fmin: 16,
+  })}
 `;
 
 const Image = styled.img`

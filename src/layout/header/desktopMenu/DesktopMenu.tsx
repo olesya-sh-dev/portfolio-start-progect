@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
-export const Menu = () => {
+export const DesktopMenu = () => {
   return (
     <StyledMenu>
       <MenuItemList>
@@ -25,7 +26,6 @@ const StyledMenu = styled.nav`
     display: none;
   }
 `;
-//
 
 const MenuItemList = styled.ul`
   display: flex;
@@ -34,8 +34,10 @@ const MenuItemList = styled.ul`
 `;
 
 const MenuItem = styled.li`
-  color: ${theme.colors.primary};
-  font-family: "Raleway", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  ${font({
+    family: "'Raleway', 'sans-serif'",
+    weight: 500,
+    color: theme.colors.primary,
+  })}
 `;

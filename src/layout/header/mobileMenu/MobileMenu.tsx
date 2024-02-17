@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { Icon } from "../../../components/Icon";
+import { font } from "../../../styles/Common";
 
 export const MobileMenu = () => {
   return (
@@ -29,10 +30,12 @@ export const MobileMenu = () => {
 const StyledMobileMenu = styled.nav`
   height: 50%;
   display: none;
+
   @media ${theme.media.mobile} {
     display: block;
   }
 `;
+
 const BurgerButton = styled.button`
   position: absolute;
   top: 0;
@@ -51,9 +54,6 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   right: 0;
   z-index: 10;
   display: none;
-  align-items: flex-end;
-  justify-content: center;
-  align-items: center;
   background-color: ${theme.colors.accent};
   height: 50%;
 
@@ -70,12 +70,15 @@ const MenuItemList = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
   gap: 20px;
 `;
 
 const MenuItem = styled.li`
-  color: ${theme.colors.primary};
-  font-family: "Raleway", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  ${font({
+    family: "'Raleway', 'sans-serif'",
+    weight: 500,
+    color: theme.colors.primary,
+  })}
 `;

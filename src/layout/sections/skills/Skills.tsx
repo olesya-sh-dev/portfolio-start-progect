@@ -46,7 +46,6 @@ const StyledSkills = styled.section`
 
   @media ${theme.media.tablet} {
     margin-bottom: 60px;
-
     ${FlexWrapper} {
       gap: 45px;
     }

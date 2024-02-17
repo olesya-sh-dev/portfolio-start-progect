@@ -33,6 +33,7 @@ const StyledContact = styled.section`
   ${SectionTitle} {
     margin-bottom: 65px;
   }
+
   ${StyledBtn} {
     align-self: flex-end;
   }

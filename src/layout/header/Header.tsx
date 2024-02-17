@@ -4,7 +4,7 @@ import { theme } from "../../styles/Theme";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Logo } from "../../components/Logo";
-import { Menu } from "./desktopMenu/DesktopMenu";
+import { DesktopMenu } from "./desktopMenu/DesktopMenu";
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 
 export const Header = () => {
@@ -15,7 +15,7 @@ export const Header = () => {
           <Logo as="a" href={""}>
             Olesya Shalay
           </Logo>
-          <Menu />
+          <DesktopMenu />
           <MobileMenu />
         </FlexWrapper>
       </Container>
@@ -34,5 +34,3 @@ const StyledHeader = styled.header`
   border: 1px solid blue;
   background-color: ${theme.colors.colorBg.main};
 `;
-
-//сохраняются 15px с боков

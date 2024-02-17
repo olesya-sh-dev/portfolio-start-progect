@@ -67,7 +67,6 @@ const ProgectsSection = styled.section`
   @media ${theme.media.tablet} {
     margin-bottom: 60px;
   }
-
   ${FlexWrapper} {
     &.firstFlexWrapper {
       @media ${theme.media.tablet} {

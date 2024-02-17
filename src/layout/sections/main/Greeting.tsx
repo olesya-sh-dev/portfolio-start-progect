@@ -4,7 +4,7 @@ import { theme } from "../../../styles/Theme";
 import { StyledBtn } from "../../../components/Button";
 import { Details } from "../../../components/Details";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-
+import { font } from "../../../styles/Common";
 export const Greeting = () => {
   return (
     <StyledGreeting>
@@ -31,7 +31,7 @@ export const Greeting = () => {
 const StyledGreeting = styled.div`
   width: 50%;
   padding-top: 110px;
-  height: 629px;
+  height: 630px;
 
   ${Details} {
     //в макете справа небольшой отступ
@@ -44,16 +44,20 @@ const StyledGreeting = styled.div`
 `;
 
 const MainTitle = styled.h1`
-  color: ${theme.colors.accent};
-  font-family: "Nunito", sans-serif;
+  ${font({
+    weight: 700,
+    color: theme.colors.accent,
+  })}
   font-size: 20px;
-  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 12px;
 `;
 const GreetingText = styled.p`
-  color: ${theme.colors.secondary};
-  font-family: "Roboto", sans-serif;
-  font-size: 64px;
-  font-weight: 700;
+  ${font({
+    family: "'Roboto', 'sans-serif'",
+    weight: 700,
+    color: theme.colors.primary,
+    Fmin: 40,
+    Fmax: 64,
+  })}
 `;
