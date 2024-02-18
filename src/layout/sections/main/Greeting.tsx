@@ -8,7 +8,7 @@ import { font } from "../../../styles/Common";
 export const Greeting = () => {
   return (
     <StyledGreeting>
-      <FlexWrapper direction="column" align="start">
+      <FlexWrapper direction="column" align="start" gap="32px">
         <MainTitle>web developer</MainTitle>
         <GreetingText>Hello, my name is Olesya Shalay</GreetingText>
         <Details>
@@ -29,17 +29,20 @@ export const Greeting = () => {
 };
 
 const StyledGreeting = styled.div`
-  width: 50%;
-  padding-top: 110px;
-  height: 630px;
+  max-width: 510px;
+  height: 575px;
+  padding: 110px 0;
 
   ${Details} {
-    //в макете справа небольшой отступ
-    margin: 30px 20px 30px 0;
+    padding-right: 22px;
   }
+  @media screen and (max-width: 1230px) {
+    max-width: 450px;
+    padding: 50px 20px;
+  }
+
   @media ${theme.media.tablet} {
-    width: 100%;
-    padding-top: 0;
+    max-width: 510px;
   }
 `;
 
@@ -50,7 +53,7 @@ const MainTitle = styled.h1`
   })}
   font-size: 20px;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: -20px;
 `;
 const GreetingText = styled.p`
   ${font({
