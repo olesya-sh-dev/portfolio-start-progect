@@ -7,14 +7,14 @@ import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Form } from "./Form";
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
   return (
     <StyledContact>
       <Container>
         <FlexWrapper direction="column" gap="24px">
           <SectionTitle>Contact me</SectionTitle>
           <Form />
-          <StyledBtn as="a" href={""} submitBtn>
+          <StyledBtn as="a" href={""} submitbtn>
             Send
           </StyledBtn>
         </FlexWrapper>

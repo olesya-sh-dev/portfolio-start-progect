@@ -4,71 +4,48 @@ import yellowfooter from "../../assets/images/yellow-footer.png";
 import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { theme } from "../../styles/Theme";
-import { font } from "../../styles/Common";
+
+import { S } from "./Footer_Styles";
+
+const socialLinksData = [
+  {
+    href: "#",
+    width: "38",
+    height: "38",
+    iconId: "linkedin",
+  },
+  {
+    href: "#",
+    width: "38",
+    height: "38",
+    iconId: "instagram",
+  },
+  {
+    href: "#",
+    width: "42",
+    height: "32",
+    iconId: "mail",
+  },
+];
 export const Footer = () => {
   return (
-    <StyledFooter>
+    <S.Footer>
       <Container>
         <FlexWrapper direction="column" gap="35px">
-          <StyledSocialLinks>
+          <S.StyledSocialLinks>
             <FlexWrapper justify="space-between" align="center">
-              <a href="#">
-                <Icon iconId={"instagram"} width="38" height="38" />
-              </a>
-              <a href="#">
-                <Icon iconId={"linkedin"} width="38" height="38" />
-              </a>
-              <a href="#">
-                <Icon iconId={"mail"} width="42" height="32" />
-              </a>
+              {socialLinksData.map((s, index) => {
+                return (
+                  <a href={s.href} key={index}>
+                    <Icon iconId={s.iconId} width={s.width} height={s.height} />
+                  </a>
+                );
+              })}
             </FlexWrapper>
-          </StyledSocialLinks>
-          <CopyRight>All Rights Reversed 2024</CopyRight>
+          </S.StyledSocialLinks>
+          <S.CopyRight>All Rights Reversed 2024</S.CopyRight>
         </FlexWrapper>
       </Container>
-    </StyledFooter>
+    </S.Footer>
   );
 };
-
-const StyledFooter = styled.footer`
-  border: 1px solid blue;
-  /* position: relative; */
-  background-image: url("${yellowfooter}");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  min-height: 345px;
-  width: 100%;
-
-  @media ${theme.media.tablet} {
-    min-height: 200px;
-    ${FlexWrapper} {
-      gap: 20px;
-    }
-  }
-`;
-
-/* &::before {
-    content: "";
-    background-image: url("${yellowfooter}");
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-  }
-`; */
-
-const StyledSocialLinks = styled.div`
-  max-width: 190px;
-  width: 100%;
-`;
-
-const CopyRight = styled.small`
-  font-size: 16px;
-  ${font}
-`;
