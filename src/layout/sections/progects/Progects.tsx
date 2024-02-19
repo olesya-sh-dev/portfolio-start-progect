@@ -2,16 +2,11 @@ import React from "react";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Container } from "../../../components/Container";
-import styled from "styled-components";
 import { Progect } from "./Progect";
 import progect1 from "../../../assets/images/progect-1.webp";
 import progect2 from "../../../assets/images/progect-2.webp";
 import progect3 from "../../../assets/images/progect-3.webp";
-import { theme } from "../../../styles/Theme";
-
-///map((element, index)=>({
-// <Progect reverse={index%2 === 0 }/>
-//}))
+import { S } from "./Progects_Styles";
 
 const progects = [
   {
@@ -31,14 +26,13 @@ const progects = [
   },
 ];
 
-export const ProgectS = () => {
+export const ProgectS: React.FC = () => {
   return (
-    <ProgectsSection>
+    <S.Progects>
       <Container>
         <FlexWrapper className="firstFlexWrapper" direction="column" gap="90px">
           <SectionTitle>Progects</SectionTitle>
-
-          <StyledProgectS>
+          <S.ProgectItems>
             <FlexWrapper
               className="secondFlexWrapper"
               direction="column"
@@ -53,38 +47,9 @@ export const ProgectS = () => {
                 />
               ))}
             </FlexWrapper>
-          </StyledProgectS>
+          </S.ProgectItems>
         </FlexWrapper>
       </Container>
-    </ProgectsSection>
+    </S.Progects>
   );
 };
-
-const ProgectsSection = styled.section`
-  border: 1px solid blue;
-  margin-bottom: 140px;
-
-  @media ${theme.media.tablet} {
-    margin-bottom: 60px;
-  }
-  ${FlexWrapper} {
-    &.firstFlexWrapper {
-      @media ${theme.media.tablet} {
-        gap: 45px;
-      }
-    }
-  }
-`;
-
-const StyledProgectS = styled.div`
-  max-width: 992px;
-  width: 100%;
-
-  ${FlexWrapper} {
-    &.secondFlexWrapper {
-      @media ${theme.media.tablet} {
-        gap: 30px;
-      }
-    }
-  }
-`;

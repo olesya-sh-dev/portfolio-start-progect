@@ -1,55 +1,24 @@
 import React from "react";
-import { styled } from "styled-components";
-import { theme } from "../../../styles/Theme";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { font } from "../../../styles/Common";
+import { S } from "./Contact_Styles";
 
-export const Form = () => {
+export const Form: React.FC = () => {
   return (
-    <StyledForm role="form">
+    <S.Form role="form">
       <FlexWrapper direction="column" gap="24px">
-        <Field>
+        <S.Field>
           <label htmlFor="name">Name</label>
           <input type="text" id="name" aria-placeholder="Your name" />
-        </Field>
-        <Field>
+        </S.Field>
+        <S.Field>
           <label htmlFor="eMail">Email</label>
           <input type="eMail" id="eMail" aria-placeholder="Your eMail" />
-        </Field>
-        <Field>
+        </S.Field>
+        <S.Field>
           <legend aria-labelledby="Message">Message</legend>
           <textarea aria-placeholder="Type a message" />
-        </Field>
+        </S.Field>
       </FlexWrapper>
-    </StyledForm>
+    </S.Form>
   );
 };
-const StyledForm = styled.form`
-  font-size: 16px;
-  ${font({ weight: 600, color: theme.colors.primary })}
-  max-width: 430px;
-  width: 100%;
-
-  label,
-  legend {
-    height: 30px;
-  }
-  textarea {
-    height: 160px;
-    resize: none;
-  }
-  input,
-  textarea {
-    border: 1px solid ${theme.colors.colorBg.inputBorder};
-    border-radius: 8px;
-    width: 100%;
-    padding: 8px;
-    background: ${theme.colors.colorBg.progectsBg};
-  }
-  @media ${theme.media.tablet} {
-    margin-top: 30px;
-  }
-`;
-const Field = styled.div`
-  width: 100%;
-`;
