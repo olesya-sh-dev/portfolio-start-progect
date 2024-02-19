@@ -1,4 +1,3 @@
-import React from "react";
 import sprite from "../assets/images/icons-sprite.svg";
 
 type IconPropsType = {

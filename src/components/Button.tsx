@@ -1,4 +1,3 @@
-import React from "react";
 import { css, styled } from "styled-components";
 import { theme } from "../styles/Theme";
 import { font } from "../styles/Common";
