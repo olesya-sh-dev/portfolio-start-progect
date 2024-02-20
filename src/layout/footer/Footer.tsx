@@ -1,10 +1,7 @@
 import React from "react";
 import { Icon } from "../../components/Icon";
-import yellowfooter from "../../assets/images/yellow-footer.png";
-import styled from "styled-components";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
-
 import { S } from "./Footer_Styles";
 
 const socialLinksData = [
@@ -27,7 +24,7 @@ const socialLinksData = [
     iconId: "mail",
   },
 ];
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
     <S.Footer>
       <Container>

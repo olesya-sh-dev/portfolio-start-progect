@@ -20,7 +20,7 @@ const iconItems = [
   { iconId: "tailwind" },
 ];
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
     <S.Skills>
       <Container>
@@ -33,8 +33,8 @@ export const Skills = () => {
               gap="95px"
               rowgap="75px"
             >
-              {iconItems.map((i) => {
-                return <Icon iconId={i.iconId} />;
+              {iconItems.map((icon, index) => {
+                return <Icon iconId={icon.iconId} key={index} />;
               })}
             </FlexWrapper>
           </S.SkillIcons>

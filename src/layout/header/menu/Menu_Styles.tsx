@@ -2,12 +2,14 @@ import { css, styled } from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
 
-const Menu = styled.ul`
-  display: flex;
-  justify-content: flex-end;
-  gap: 50px;
-  @media ${theme.media.mobile} {
-    display: none;
+const Menu = styled.nav`
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    /* @media ${theme.media.mobile} {
+      display: none;
+    } */
   }
 `;
 
@@ -28,11 +30,11 @@ const MenuItem = styled.li`
 
 const MobileMenu = styled.nav`
   height: 50%;
-  display: none;
+  /* display: none; */
 
-  @media ${theme.media.mobile} {
+  /* @media ${theme.media.mobile} {
     display: block;
-  }
+  } */
 `;
 
 const BurgerButton = styled.button`

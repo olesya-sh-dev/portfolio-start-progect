@@ -40,6 +40,7 @@ export const ProgectS: React.FC = () => {
             >
               {progects.map((p, i) => (
                 <Progect
+                  key={i}
                   title={p.title}
                   text={p.text}
                   src={p.src}
