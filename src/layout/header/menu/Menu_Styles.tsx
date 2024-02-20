@@ -2,10 +2,13 @@ import { css, styled } from "styled-components";
 import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
 
-const MenuItemList = styled.ul`
+const Menu = styled.ul`
   display: flex;
   justify-content: flex-end;
   gap: 50px;
+  @media ${theme.media.mobile} {
+    display: none;
+  }
 `;
 
 const MenuItem = styled.li`
@@ -17,11 +20,11 @@ const MenuItem = styled.li`
   })}
 `;
 
-const Menu = styled.nav`
-  @media ${theme.media.mobile} {
-    display: none;
-  }
-`;
+// const Menu = styled.nav`
+//   @media ${theme.media.mobile} {
+//     display: none;
+//   }
+// `;
 
 const MobileMenu = styled.nav`
   height: 50%;
@@ -60,7 +63,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
       color: ${theme.colors.accent};
       display: block;
     `}
-  ${MenuItemList} {
+  ${Menu} {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -70,9 +73,9 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 `;
 
 export const S = {
-  MenuItemList,
-  MenuItem,
   Menu,
+  MenuItem,
+  // Menu,
   MobileMenu,
   BurgerButton,
   MobileMenuPopup,

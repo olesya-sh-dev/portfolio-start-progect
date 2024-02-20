@@ -3,7 +3,7 @@ import { S } from "./Menu_Styles";
 
 export const Menu: React.FC = () => {
   return (
-    <S.MenuItemList>
+    <S.Menu>
       <S.MenuItem as="a" href="">
         About
       </S.MenuItem>
@@ -13,6 +13,6 @@ export const Menu: React.FC = () => {
       <S.MenuItem as="a" href="">
         Contacts
       </S.MenuItem>
-    </S.MenuItemList>
+    </S.Menu>
   );
 };

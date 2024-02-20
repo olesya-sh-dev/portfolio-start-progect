@@ -1,15 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { Greeting } from "./Greeting";
-
-import { theme } from "../../../styles/Theme";
 import { Picture } from "./Picture";
-
+import { S } from "./Main_Styles";
 export const Main: React.FC = () => {
   return (
-    <StyledMain>
+    <S.Main>
       <Container>
         <FlexWrapper
           direction="row-reverse"
@@ -21,33 +18,6 @@ export const Main: React.FC = () => {
           <Greeting />
         </FlexWrapper>
       </Container>
-    </StyledMain>
+    </S.Main>
   );
 };
-
-const StyledMain = styled.section`
-  border: 1px solid blue;
-  margin-bottom: 140px;
-
-  @media screen and (max-width: 1230px) {
-    ${FlexWrapper} {
-      gap: 20px;
-    }
-  }
-
-  @media screen and (max-width: 1050px) {
-    margin-bottom: 60px;
-    ${Container} {
-    }
-    ${FlexWrapper} {
-      flex-direction: column;
-    }
-  }
-
-  /* ${Container} {
-    @media ${theme.media.tablet} {
-      margin-top: 630px;
-      margin-bottom: 50px; 
-       }
-  } */
-`;

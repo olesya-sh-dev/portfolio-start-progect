@@ -2,9 +2,10 @@ import React from "react";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Logo } from "../../components/Logo";
-import { DesktopMenu } from "./desktopMenu/DesktopMenu";
+
 import { MobileMenu } from "./mobileMenu/MobileMenu";
 import { S } from "./Header_Styles";
+import { Menu } from "./menu/Menu";
 
 export const Header: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ export const Header: React.FC = () => {
           <Logo as="a" href={""}>
             Olesya Shalay
           </Logo>
-          <DesktopMenu />
+          <Menu />
           <MobileMenu />
         </FlexWrapper>
       </Container>
