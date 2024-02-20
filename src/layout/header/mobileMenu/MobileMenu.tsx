@@ -1,84 +1,17 @@
 import React from "react";
-import styled, { css } from "styled-components";
-import { theme } from "../../../styles/Theme";
+import { Menu } from "../menu/Menu";
+import { S } from "../menu/Menu_Styles";
 import { Icon } from "../../../components/Icon";
-import { font } from "../../../styles/Common";
 
-export const MobileMenu = () => {
+export const MobileMenu: React.FC = () => {
   return (
-    <StyledMobileMenu>
-      <BurgerButton>
+    <S.MobileMenu>
+      <S.BurgerButton>
         <Icon iconId={"menu"} width="50" height="50" />
-      </BurgerButton>
-      <MobileMenuPopup isOpen={false}>
-        <MenuItemList>
-          <MenuItem as="a" href="">
-            About
-          </MenuItem>
-          <MenuItem as="a" href="">
-            Progects
-          </MenuItem>
-          <MenuItem as="a" href="">
-            Contacts
-          </MenuItem>
-        </MenuItemList>
-      </MobileMenuPopup>
-    </StyledMobileMenu>
+      </S.BurgerButton>
+      <S.MobileMenuPopup isOpen={true}>
+        <Menu />
+      </S.MobileMenuPopup>
+    </S.MobileMenu>
   );
 };
-
-const StyledMobileMenu = styled.nav`
-  height: 50%;
-  display: none;
-
-  @media ${theme.media.mobile} {
-    display: block;
-  }
-`;
-
-const BurgerButton = styled.button`
-  position: absolute;
-  top: 0;
-  right: 20px;
-  color: ${theme.colors.primary};
-  z-index: 20;
-  display: block;
-  position: fixed;
-`;
-
-const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-  display: none;
-  background-color: ${theme.colors.accent};
-  height: 50%;
-
-  ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
-      color: ${theme.colors.accent};
-      display: block;
-    `}
-`;
-
-const MenuItemList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  gap: 20px;
-`;
-
-const MenuItem = styled.li`
-  font-size: 18px;
-  ${font({
-    family: "'Raleway', 'sans-serif'",
-    weight: 500,
-    color: theme.colors.primary,
-  })}
-`;

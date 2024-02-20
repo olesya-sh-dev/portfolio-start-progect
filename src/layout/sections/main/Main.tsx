@@ -7,7 +7,7 @@ import { Greeting } from "./Greeting";
 import { theme } from "../../../styles/Theme";
 import { Picture } from "./Picture";
 
-export const Main = () => {
+export const Main: React.FC = () => {
   return (
     <StyledMain>
       <Container>
@@ -37,6 +37,8 @@ const StyledMain = styled.section`
 
   @media screen and (max-width: 1050px) {
     margin-bottom: 60px;
+    ${Container} {
+    }
     ${FlexWrapper} {
       flex-direction: column;
     }

@@ -1,43 +1,11 @@
 import React from "react";
-import styled from "styled-components";
-import { theme } from "../../../styles/Theme";
-import { font } from "../../../styles/Common";
+import { Menu } from "../menu/Menu";
+import { S } from "./../../header/menu/Menu_Styles";
 
-export const DesktopMenu = () => {
+export const DesktopMenu: React.FC = () => {
   return (
-    <StyledMenu>
-      <MenuItemList>
-        <MenuItem as="a" href="">
-          About
-        </MenuItem>
-        <MenuItem as="a" href="">
-          Progects
-        </MenuItem>
-        <MenuItem as="a" href="">
-          Contacts
-        </MenuItem>
-      </MenuItemList>
-    </StyledMenu>
+    <S.Menu>
+      <Menu />
+    </S.Menu>
   );
 };
-
-const StyledMenu = styled.nav`
-  @media ${theme.media.mobile} {
-    display: none;
-  }
-`;
-
-const MenuItemList = styled.ul`
-  display: flex;
-  justify-content: flex-end;
-  gap: 50px;
-`;
-
-const MenuItem = styled.li`
-  font-size: 18px;
-  ${font({
-    family: "'Raleway', 'sans-serif'",
-    weight: 500,
-    color: theme.colors.primary,
-  })}
-`;
