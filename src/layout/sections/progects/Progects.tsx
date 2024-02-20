@@ -28,7 +28,7 @@ const progects = [
 
 export const ProgectS: React.FC = () => {
   return (
-    <S.Progects>
+    <S.Progects id="progects">
       <Container>
         <FlexWrapper className="firstFlexWrapper" direction="column" gap="90px">
           <SectionTitle>Progects</SectionTitle>

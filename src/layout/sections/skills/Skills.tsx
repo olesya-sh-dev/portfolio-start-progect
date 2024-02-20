@@ -22,7 +22,7 @@ const iconItems = [
 
 export const Skills: React.FC = () => {
   return (
-    <S.Skills>
+    <S.Skills id="skills">
       <Container>
         <FlexWrapper direction={"column"} gap="75px">
           <SectionTitle>Skills</SectionTitle>

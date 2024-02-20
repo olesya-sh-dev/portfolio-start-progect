@@ -5,13 +5,13 @@ export const Menu: React.FC = () => {
   return (
     <S.Menu>
       <ul>
-        <S.MenuItem as="a" href="">
-          About
+        <S.MenuItem as="a" href="#skills">
+          Skills
         </S.MenuItem>
-        <S.MenuItem as="a" href="">
+        <S.MenuItem as="a" href="#progects">
           Progects
         </S.MenuItem>
-        <S.MenuItem as="a" href="">
+        <S.MenuItem as="a" href="#contact">
           Contacts
         </S.MenuItem>
       </ul>

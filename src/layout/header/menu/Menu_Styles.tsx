@@ -3,13 +3,11 @@ import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
 
 const Menu = styled.nav`
+  height: 100%;
   ul {
     display: flex;
     justify-content: flex-end;
     gap: 50px;
-    /* @media ${theme.media.mobile} {
-      display: none;
-    } */
   }
 `;
 
@@ -22,20 +20,7 @@ const MenuItem = styled.li`
   })}
 `;
 
-// const Menu = styled.nav`
-//   @media ${theme.media.mobile} {
-//     display: none;
-//   }
-// `;
-
-const MobileMenu = styled.nav`
-  height: 50%;
-  /* display: none; */
-
-  /* @media ${theme.media.mobile} {
-    display: block;
-  } */
-`;
+const MobileMenu = styled.div``;
 
 const BurgerButton = styled.button`
   position: absolute;
@@ -58,26 +43,27 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   background-color: ${theme.colors.accent};
   height: 30%;
   opacity: 0.8;
-
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
       color: ${theme.colors.accent};
       display: block;
     `}
+
   ${Menu} {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    gap: 20px;
+    ul {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      height: 100%;
+    }
   }
 `;
 
 export const S = {
   Menu,
   MenuItem,
-  // Menu,
   MobileMenu,
   BurgerButton,
   MobileMenuPopup,

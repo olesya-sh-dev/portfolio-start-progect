@@ -10,7 +10,7 @@ export const MobileMenu: React.FC = () => {
       <S.BurgerButton>
         <Icon iconId={"menu"} width="50" height="50" />
       </S.BurgerButton>
-      <S.MobileMenuPopup isOpen={false}>
+      <S.MobileMenuPopup isOpen={true}>
         <Menu />
       </S.MobileMenuPopup>
     </S.MobileMenu>
