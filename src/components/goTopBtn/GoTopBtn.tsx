@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Icon } from "../../../components/Icon";
-import { styled } from "styled-components";
-import { theme } from "../../../styles/Theme";
-
+import { Icon } from "../Icon";
 import { animateScroll as scroll } from "react-scroll";
+import { S } from "./GoTopBtn_Styles";
+
 export const GoTopBtn: React.FC = () => {
   const [showGoTopBtn, setShowGoTopBtn] = useState(false);
 
@@ -20,24 +19,15 @@ export const GoTopBtn: React.FC = () => {
   return (
     <>
       {showGoTopBtn && (
-        <StyledGoTopBtn
+        <S.GoTopBtn
           onClick={() => {
             scroll.scrollToTop();
           }}
         >
           <Icon iconId="gotop" height="20" width="20" />
-        </StyledGoTopBtn>
+        </S.GoTopBtn>
       )}
       ;
     </>
   );
 };
-//кривой box
-const StyledGoTopBtn = styled.div`
-  background-color: ${theme.colors.accent};
-  border-radius: 50%;
-  padding: 10px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-`;
