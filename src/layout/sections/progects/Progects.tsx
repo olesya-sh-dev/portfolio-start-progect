@@ -30,14 +30,10 @@ export const ProgectS: React.FC = () => {
   return (
     <S.Progects id="progects">
       <Container>
-        <FlexWrapper className="firstFlexWrapper" direction="column" gap="90px">
+        <FlexWrapper direction="column" gap="90px">
           <SectionTitle>Progects</SectionTitle>
           <S.ProgectItems>
-            <FlexWrapper
-              className="secondFlexWrapper"
-              direction="column"
-              gap="80px"
-            >
+            <FlexWrapper direction="column" gap="80px">
               {progects.map((p, i) => (
                 <Progect
                   key={i}

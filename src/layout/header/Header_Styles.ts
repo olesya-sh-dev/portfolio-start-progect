@@ -7,9 +7,6 @@ const Header = styled.header`
   width: 100%;
   position: fixed;
   z-index: 5;
-  ${Logo} {
-    margin-right: auto;
-  }
   border: 1px solid blue;
   background-color: ${theme.colors.colorBg.main};
 `;

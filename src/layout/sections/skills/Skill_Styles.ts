@@ -17,7 +17,6 @@ const Skills = styled.section`
 const SkillIcons = styled.div`
   ${FlexWrapper} {
     @media ${theme.media.tablet} {
-      justify-content: center;
       gap: 40px;
       row-gap: 30px;
     }

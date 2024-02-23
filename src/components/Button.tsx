@@ -9,6 +9,9 @@ type StyledBtnPropsType = {
 };
 
 export const StyledBtn = styled.button<StyledBtnPropsType>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 43px;
   font-size: 18px;
   ${font({
@@ -17,7 +20,6 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     color: theme.colors.primary,
   })}
   border-radius: 8px;
-  padding: 8px 24px 8px 24px;
 
   ${(props) =>
     props.primary &&

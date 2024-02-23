@@ -4,6 +4,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Details } from "../../../components/Details";
 import { font } from "../../../styles/Common";
+import { Container } from "../../../components/Container";
 
 const Progects = styled.section`
   border: 1px solid blue;
@@ -12,8 +13,9 @@ const Progects = styled.section`
   @media ${theme.media.tablet} {
     margin-bottom: 60px;
   }
-  ${FlexWrapper} {
-    &.firstFlexWrapper {
+
+  ${Container} {
+    & > ${FlexWrapper} {
       @media ${theme.media.tablet} {
         gap: 45px;
       }
@@ -24,11 +26,9 @@ const ProgectItems = styled.div`
   max-width: 992px;
   width: 100%;
 
-  ${FlexWrapper} {
-    &.secondFlexWrapper {
-      @media ${theme.media.tablet} {
-        gap: 30px;
-      }
+  & > ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      gap: 30px;
     }
   }
 `;
@@ -70,7 +70,6 @@ const ProgectInfo = styled.div`
 `;
 
 const Title = styled(SectionTitle)`
-  //как перезатереть только макс и мин значения?
   ${font({
     family: "'Playfair Display', 'sans-serif'",
     weight: 700,

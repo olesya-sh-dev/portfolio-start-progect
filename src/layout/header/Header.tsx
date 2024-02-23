@@ -22,14 +22,8 @@ export const Header: React.FC = () => {
     <S.Header>
       <Container>
         <FlexWrapper>
-          <Logo as="a" href={""}>
-            Olesya Shalay
-          </Logo>
-
+          <Logo />
           {width < breakpoint ? <MobileMenu /> : <Menu />}
-
-          {/* <Menu />
-          <MobileMenu /> */}
         </FlexWrapper>
       </Container>
     </S.Header>

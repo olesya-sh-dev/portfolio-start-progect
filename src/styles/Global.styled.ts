@@ -36,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
       background-color: ${theme.colors.accent};
       border: 1px solid ${theme.colors.primary}
     }
+    cursor: pointer;
   }
 
   ul {
